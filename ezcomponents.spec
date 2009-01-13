@@ -8,7 +8,7 @@ Group:		Development/Languages/PHP
 Source0:	http://ezcomponents.org/files/downloads/%{name}-%{version}.tar.bz2
 # Source0-md5:	57b211e2e85670633ebb165e14742f95
 URL:		http://www.ezcomponents.org/
-BuildRequires:	php-common >= 4:5.1
+BuildRequires:	php-common >= 4:5.2.1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.461
 BuildArch:	noarch
