@@ -16,6 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_appdir	%{php_data_dir}/%{name}
 
+# fool adapter: allow version macro in url
+%define		docver	%{version}
+
 %description
 eZ Components is an enterprise ready general purpose PHP components
 library used independently or together for PHP application
@@ -26,7 +29,7 @@ needs.
 %package Archive
 Summary:	Archive
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Archive.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Archive.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Archive
@@ -37,7 +40,7 @@ of various formats. The currently supported archives formats are Tar
 %package Authentication
 Summary:	Authentication
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Authentication.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Authentication.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Authentication
@@ -48,7 +51,7 @@ different providers and protocols.
 %package AuthenticationDatabaseTiein
 Summary:	AuthenticationDatabaseTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_AuthenticationDatabaseTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_AuthenticationDatabaseTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description AuthenticationDatabaseTiein
@@ -59,7 +62,7 @@ different providers and protocols.
 %package Base
 Summary:	Base
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Base.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Base.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Base
@@ -69,7 +72,7 @@ rely on. Therefore every component relies on this package.
 %package Cache
 Summary:	Cache
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Cache.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Cache.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Cache
@@ -79,7 +82,7 @@ specify the best performing solution for your caching-problem.
 %package Configuration
 Summary:	Configuration
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Configuration.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Configuration.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Configuration
@@ -90,7 +93,7 @@ based format.
 %package ConsoleTools
 Summary:	ConsoleTools
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_ConsoleTools.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_ConsoleTools.html
 Requires:	%{name} = %{version}-%{release}
 
 %description ConsoleTools
@@ -101,7 +104,7 @@ contains a class for parsing command line options.
 %package Database
 Summary:	Database
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Database.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Database.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Database
@@ -112,7 +115,7 @@ dialects.
 %package DatabaseSchema
 Summary:	DatabaseSchema
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_DatabaseSchema.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_DatabaseSchema.html
 Requires:	%{name} = %{version}-%{release}
 
 %description DatabaseSchema
@@ -123,7 +126,7 @@ database schema.
 %package Debug
 Summary:	Debug
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Debug.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Debug.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Debug
@@ -135,7 +138,7 @@ within your application.
 %package Document
 Summary:	Document
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Document.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Document.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Document
@@ -146,7 +149,7 @@ and similar.
 %package EventLog
 Summary:	EventLog
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_EventLog.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_EventLog.html
 Requires:	%{name} = %{version}-%{release}
 
 %description EventLog
@@ -156,7 +159,7 @@ spaces in different formats.
 %package EventLogDatabaseTiein
 Summary:	EventLogDatabaseTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_EventLogDatabaseTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_EventLogDatabaseTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description EventLogDatabaseTiein
@@ -165,7 +168,7 @@ Contains the database writer backend for the EventLog component.
 %package Execution
 Summary:	Execution
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Execution.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Execution.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Execution
@@ -175,7 +178,7 @@ when a fatal error happened or an uncaught exception was thrown.
 %package Feed
 Summary:	Feed
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Feed.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Feed.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Feed
@@ -186,7 +189,7 @@ geo, iTunes).
 %package File
 Summary:	File
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_File.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_File.html
 Requires:	%{name} = %{version}-%{release}
 
 %description File
@@ -196,7 +199,7 @@ are just missing.
 %package Graph
 Summary:	Graph
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Graph.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Graph.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Graph
@@ -206,7 +209,7 @@ diagrams.
 %package GraphDatabaseTiein
 Summary:	GraphDatabaseTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_GraphDatabaseTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_GraphDatabaseTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description GraphDatabaseTiein
@@ -216,7 +219,7 @@ statements as basis for ezcGraph Datasets.
 %package ImageAnalysis
 Summary:	ImageAnalysis
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_ImageAnalysis.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_ImageAnalysis.html
 Requires:	%{name} = %{version}-%{release}
 
 %description ImageAnalysis
@@ -227,7 +230,7 @@ and GIF) additional information is gathered as well.
 %package ImageConversion
 Summary:	ImageConversion
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_ImageConversion.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_ImageConversion.html
 Requires:	%{name} = %{version}-%{release}
 
 %description ImageConversion
@@ -237,7 +240,7 @@ changes, resizing and special effects.
 %package Mail
 Summary:	Mail
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Mail.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Mail.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Mail
@@ -249,7 +252,7 @@ mail or IMAP, POP3 or mbox to retrieve e-mail.
 %package MvcMailTiein
 Summary:	MvcMailTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_MvcMailTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_MvcMailTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description MvcMailTiein
@@ -259,7 +262,7 @@ from e-mail messages.
 %package MvcTemplateTiein
 Summary:	MvcTemplateTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_MvcTemplateTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_MvcTemplateTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description MvcTemplateTiein
@@ -269,7 +272,7 @@ the Template component.
 %package MvcTools
 Summary:	MvcTools
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_MvcTools.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_MvcTools.html
 Requires:	%{name} = %{version}-%{release}
 
 %description MvcTools
@@ -280,7 +283,7 @@ this component you can very easily build an MVC framework.
 %package PersistentObject
 Summary:	PersistentObject
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_PersistentObject.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_PersistentObject.html
 Requires:	%{name} = %{version}-%{release}
 
 %description PersistentObject
@@ -291,7 +294,7 @@ needed to fetch, list, delete etc these datastructures.
 %package PersistentObjectDatabaseSchemaTiein
 Summary:	PersistentObjectDatabaseSchemaTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_PersistentObjectDatabaseSchemaTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_PersistentObjectDatabaseSchemaTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description PersistentObjectDatabaseSchemaTiein
@@ -301,7 +304,7 @@ definition files from DatabaseSchema definitions.
 %package PhpGenerator
 Summary:	PhpGenerator
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_PhpGenerator.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_PhpGenerator.html
 Requires:	%{name} = %{version}-%{release}
 
 %description PhpGenerator
@@ -311,7 +314,7 @@ code.
 %package Search
 Summary:	Search
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Search.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Search.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Search
@@ -321,7 +324,7 @@ documents with different search engine backends.
 %package SignalSlot
 Summary:	SignalSlot
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_SignalSlot.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_SignalSlot.html
 Requires:	%{name} = %{version}-%{release}
 
 %description SignalSlot
@@ -331,7 +334,7 @@ object communication through the use of signals and slots.
 %package SystemInformation
 Summary:	SystemInformation
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_SystemInformation.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_SystemInformation.html
 Requires:	%{name} = %{version}-%{release}
 
 %description SystemInformation
@@ -341,7 +344,7 @@ speed, and the available amount of memory.
 %package Template
 Summary:	Template
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Template.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Template.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Template
@@ -354,7 +357,7 @@ functionality (such as a Translation system).
 %package TemplateTranslationTiein
 Summary:	TemplateTranslationTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_TemplateTranslationTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_TemplateTranslationTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description TemplateTranslationTiein
@@ -363,7 +366,7 @@ Provides functionality to use translations inside templates.
 %package Translation
 Summary:	Translation
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Translation.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Translation.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Translation
@@ -375,7 +378,7 @@ you to transform translation definitions for special use.
 %package TranslationCacheTiein
 Summary:	TranslationCacheTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_TranslationCacheTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_TranslationCacheTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description TranslationCacheTiein
@@ -385,7 +388,7 @@ component and allows cached translations.
 %package Tree
 Summary:	Tree
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Tree.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Tree.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Tree
@@ -396,7 +399,7 @@ for optimal performance.
 %package TreeDatabaseTiein
 Summary:	TreeDatabaseTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_TreeDatabaseTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_TreeDatabaseTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description TreeDatabaseTiein
@@ -407,7 +410,7 @@ backends and data stores.
 %package TreePersistentObjectTiein
 Summary:	TreePersistentObjectTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_TreePersistentObjectTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_TreePersistentObjectTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description TreePersistentObjectTiein
@@ -418,7 +421,7 @@ storage for the data elements of the tree nodes.
 %package Url
 Summary:	Url
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Url.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Url.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Url
@@ -428,7 +431,7 @@ build, get/set path, get/set query).
 %package UserInput
 Summary:	UserInput
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_UserInput.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_UserInput.html
 Requires:	%{name} = %{version}-%{release}
 
 %description UserInput
@@ -439,7 +442,7 @@ extends it by providing a more inituitive API.
 %package Webdav
 Summary:	Webdav
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Webdav.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Webdav.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Webdav
@@ -450,7 +453,7 @@ through the WebDAV HTTP extension.
 %package Workflow
 Summary:	Workflow
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_Workflow.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_Workflow.html
 Requires:	%{name} = %{version}-%{release}
 
 %description Workflow
@@ -461,7 +464,7 @@ definition and execution of workflow specifications.
 %package WorkflowDatabaseTiein
 Summary:	WorkflowDatabaseTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_WorkflowDatabaseTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_WorkflowDatabaseTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description WorkflowDatabaseTiein
@@ -470,7 +473,7 @@ Contains the database backend for the Workflow component.
 %package WorkflowEventLogTiein
 Summary:	WorkflowEventLogTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_WorkflowEventLogTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_WorkflowEventLogTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description WorkflowEventLogTiein
@@ -479,7 +482,7 @@ Contains the EventLog listener for the Workflow component.
 %package WorkflowSignalSlotTiein
 Summary:	WorkflowSignalSlotTiein
 Group:		Development/Languages/PHP
-URL:		http://www.ezcomponents.org/docs/api/2008.2/classtrees_WorkflowSignalSlotTiein.html
+URL:		http://www.ezcomponents.org/docs/api/%{docver}/classtrees_WorkflowSignalSlotTiein.html
 Requires:	%{name} = %{version}-%{release}
 
 %description WorkflowSignalSlotTiein
