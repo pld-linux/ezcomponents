@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.php
 Summary:	eZ Components
 Name:		ezcomponents
 Version:	2008.2
